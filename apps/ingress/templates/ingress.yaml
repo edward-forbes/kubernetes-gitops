@@ -4,11 +4,8 @@ metadata:
   name: application-ingress
 
 spec:
-  ingressClassName: nginx
-
   rules:
-    - host: {{ .Values.host }}
-      http:
+    - http:
         paths:
           - path: /api
             pathType: Prefix
