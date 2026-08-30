@@ -14,7 +14,7 @@ spec:
         valueFiles:
           - $values/environments/local/postgres-values.yaml
 
-    - repoURL: https://github.com/YOURORG/kubernetes-gitops.git
+    - repoURL: https://github.com/edward-forbes/kubernetes-gitops.git
       targetRevision: main
       ref: values
 
