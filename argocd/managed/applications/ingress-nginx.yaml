@@ -18,8 +18,8 @@ spec:
           service:
             type: LoadBalancer
             ports:
-              http: 8080
-              https: 8443
+              http: 80
+              https: 443
 
   destination:
     server: https://kubernetes.default.svc

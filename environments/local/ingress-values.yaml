@@ -1,6 +1,9 @@
-controller:
-  service:
-    type: LoadBalancer
-    ports:
-      http: 80
-      https: 443
+host: localhost
+
+frontend:
+  serviceName: frontend-local
+  port: 80
+
+backend:
+  serviceName: backend-local
+  port: 8080
