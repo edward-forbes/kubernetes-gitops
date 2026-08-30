@@ -1,9 +1,0 @@
-host: localhost
-
-frontend:
-  serviceName: frontend-local
-  port: 80
-
-backend:
-  serviceName: backend-local
-  port: 8080
