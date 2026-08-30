@@ -7,7 +7,7 @@ spec:
   project: local
 
   source:
-    repoURL: https://github.com/YOURORG/kubernetes-gitops.git
+    repoURL: https://github.com/edward-forbes/kubernetes-gitops.git
     targetRevision: main
     path: apps/backend
 
