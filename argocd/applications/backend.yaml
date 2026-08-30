@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backend-local
+  namespace: argocd
+spec:
+  project: local
+
+  source:
+    repoURL: https://github.com/YOURORG/kubernetes-gitops.git
+    targetRevision: main
+    path: apps/backend
+
+    helm:
+      valueFiles:
+        - ../../environments/local/backend-values.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
