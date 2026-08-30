@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: frontend-local
+  namespace: argocd
+
+spec:
+  project: local
+
+  source:
+    repoURL: https://github.com/edward-forbes/kubernetes-gitops.git
+    targetRevision: main
+    path: apps/frontend
+
+    helm:
+      valueFiles:
+        - ../../environments/local/frontend-values.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
