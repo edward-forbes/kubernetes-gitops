@@ -1,4 +1,4 @@
-host: app.local
+host: localhost
 
 frontend:
   serviceName: frontend-local
