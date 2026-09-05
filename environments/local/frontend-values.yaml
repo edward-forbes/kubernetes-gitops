@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: alpine
+  repository: ghcr.io/edward-forbes/task-manager-fe
+  tag: "8e011f6df5f62d66547a32515d6b2c8a5e7ec27f"
 
 service:
   type: ClusterIP

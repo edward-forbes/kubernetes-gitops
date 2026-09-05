@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: "alpine"
+  repository: ghcr.io/edward-forbes/task-manager-fe
+  tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
