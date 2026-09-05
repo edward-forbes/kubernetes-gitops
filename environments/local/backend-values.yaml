@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/edward-forbes/task-manager-be
-  tag: "faa9b51db7b3148b2739801617fbebd123dde41c"
+  tag: "93f73cf64938e93bff8d336fa1bbda9118b8cdb8"
 
 service:
   type: ClusterIP
