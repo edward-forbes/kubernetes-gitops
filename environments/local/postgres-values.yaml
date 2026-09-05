@@ -5,8 +5,11 @@ image:
 
 auth:
   username: appuser
-  password: localpassword
   database: appdb
+  existingSecret: postgres-local-auth
+  secretKeys:
+    adminPasswordKey: postgres-password
+    userPasswordKey: password
 
 primary:
   persistence:
